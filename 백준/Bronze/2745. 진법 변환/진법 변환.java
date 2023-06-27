@@ -16,10 +16,10 @@ public class Main {
         for (int i = number.length()-1; i >= 0; i--) {
             int value;
             char word = number.charAt(i);
-            if (word <= 57) {
-                value = word - 48;
+            if ('0' <= word && word <= '9') {
+                value = word - '0';
             } else {
-                value = word - 55;
+                value = word - 'A' + 10;
             }
 
             sum += Math.pow(arithmetic, number.length()-i-1) * value;
